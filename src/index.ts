@@ -1,8 +1,9 @@
 import { App } from "vue";
 
 import LText from "./components/LText";
+import LImage from "./components/LImage";
 
-const components = [LText];
+const components = [LText, LImage];
 
 const install = (app: App) => {
   components.forEach((component, index) => {
@@ -11,7 +12,7 @@ const install = (app: App) => {
   });
 };
 
-export { LText, install };
+export { LText, LImage, install };
 
 export default {
   install,
