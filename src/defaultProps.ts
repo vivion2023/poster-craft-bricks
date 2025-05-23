@@ -60,6 +60,7 @@ export interface TextComponentProps extends CommonComponentProps {
   textAlign: string;
   color: string;
   backgroundColor: string;
+  tag: string;
 }
 export interface ImageComponentProps extends CommonComponentProps {
   src: string;
@@ -77,6 +78,7 @@ export const textDefaultProps: TextComponentProps = {
   textAlign: "left",
   color: "#000000",
   backgroundColor: "",
+  tag: "div",
   ...commonDefaultProps,
 };
 export const imageDefaultProps: ImageComponentProps = {
