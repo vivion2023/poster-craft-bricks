@@ -11,9 +11,9 @@
 
 <script setup lang="ts">
 import { defineProps, withDefaults } from "vue";
-import { textDefaultProps, textStylePropNames } from "../defaultProps";
-import type { TextComponentProps } from "../defaultProps";
-import useComponentCommon from "../hooks/useComponentCommon";
+import { textDefaultProps, textStylePropNames } from "../../defaultProps";
+import type { TextComponentProps } from "../../defaultProps";
+import useComponentCommon from "../../hooks/useComponentCommon";
 
 const props = withDefaults(defineProps<TextComponentProps>(), {
   ...textDefaultProps,
