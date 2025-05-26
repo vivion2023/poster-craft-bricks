@@ -1,6 +1,5 @@
 <template>
   <h1>慕课乐高标准模版</h1>
-  <HelloWorld />
   <ul>
     <li>开箱即用</li>
     <li>typescript</li>
@@ -11,7 +10,7 @@
   </ul>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from "vue";
 
 export default defineComponent({
