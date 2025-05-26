@@ -1,5 +1,13 @@
 import { App } from "vue";
-
+export {
+  textDefaultProps,
+  textStylePropNames,
+  TextComponentProps,
+  imageDefaultProps,
+  imageStylePropsNames,
+  ImageComponentProps,
+  AllComponentProps,
+} from "./defaultProps";
 import LText from "./components/LText";
 import LImage from "./components/LImage";
 
