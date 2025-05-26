@@ -1,32 +1,30 @@
 import vue from "rollup-plugin-vue";
 import css from "rollup-plugin-css-only";
 import typescript from "rollup-plugin-typescript2";
-import pkg from "../package.json" with { type: "json" };
-const { name } = pkg;
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import packageJson from "../package.json" with { type: "json" };
+const { name } = packageJson;
 const file = (type) => `dist/${name}.${type}.js`;
-const override = {
-  compilerOptions: {
-    declaration: true,
-  },
+const overrides = {
+  compilerOptions: { declaration: true },
+  exclude: ["tests/**/*.ts", "tests/**/*.tsx"],
 };
-
-const config = {
-  input: "src/App.vue",
+export { name, file };
+export default {
+  input: "src/index.ts",
   output: {
     name,
     file: file("esm"),
     format: "es",
   },
   plugins: [
-    vue(), 
-    css({ output: "bundle.css" }), 
-    typescript({ 
-      tsconfigOverride: override,
-      check: false,
-      tsconfig: "tsconfig.json",
-      include: ["src/**/*.vue"]
-    })
+    nodeResolve(),
+    typescript({ tsconfigOverride: overrides }),
+    vue({
+      compileTemplate: true,
+      preprocessStyles: true,
+    }),
+    css({ output: "bundle.css" }),
   ],
+  external: ["vue", "lodash-es"],
 };
-
-export default config;

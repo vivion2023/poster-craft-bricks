@@ -5,7 +5,6 @@
 </template>
 
 <script setup lang="ts">
-import { withDefaults, defineProps } from "vue";
 import { imageDefaultProps, imageStylePropsNames } from "../defaultProps";
 import type { ImageComponentProps } from "../defaultProps";
 import useComponentCommon from "../hooks/useComponentCommon";
