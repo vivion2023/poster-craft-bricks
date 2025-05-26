@@ -1,6 +1,8 @@
 import vue from "rollup-plugin-vue";
 import css from "rollup-plugin-css-only";
-const name = "poster-craft-bricks";
+// const name = "poster-craft-bricks";
+import pkg from "../package.json" with { type: "json" };
+const { name } = pkg;
 const file = (type) => `dist/${name}.${type}.js`;
 
 const config = {
@@ -10,7 +12,7 @@ const config = {
     file: file("esm"),
     format: "es",
   },
-  plugins: [vue(), css({ output: "dist/style.css" })],
+  plugins: [vue(), css({ output: "bundle.css" })],
 };
 
 export default config;
