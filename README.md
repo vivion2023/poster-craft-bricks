@@ -1,4 +1,4 @@
-# 慕课乐高标准模版
+# poster-craft-bricks组件
 
 ## 特性
 * 开箱即用
