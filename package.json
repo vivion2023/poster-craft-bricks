@@ -12,7 +12,15 @@
     "Vue3",
     "UI"
   ],
-  "typings": "dist/index.d.ts",
+  "homepage": "https://github.com/vivion2023/poster-craft-bricks",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vivion2023/poster-craft-bricks.git"
+  },
+  "author": {
+    "name": "vivion2023",
+    "email": "vivion2023@gmail.com"
+  },
   "exports": {
     ".": {
       "import": "./dist/poster-craft-bricks.esm.js",
@@ -29,7 +37,8 @@
     "lint": "vue-cli-service lint",
     "build:esm": "rollup --config build/rollup.esm.config.js",
     "build:umd": "rollup --config build/rollup.umd.config.js",
-    "clean": "rimraf ./dist"
+    "clean": "rimraf ./dist",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "core-js": "^3.6.5",
