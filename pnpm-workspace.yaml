@@ -1,0 +1,2 @@
+overrides:
+  vue: link:../poster-craft/node_modules/vue

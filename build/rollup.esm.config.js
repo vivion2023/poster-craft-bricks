@@ -6,5 +6,6 @@ export default {
     name,
     file: file("esm"),
     format: "esm",
+    exports: "named",
   },
 };

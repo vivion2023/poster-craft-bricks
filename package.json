@@ -1,7 +1,28 @@
 {
   "name": "poster-craft-bricks",
   "version": "1.0.0",
+  "private": false,
   "type": "module",
+  "main": "dist/poster-craft-bricks.umd.js",
+  "module": "dist/poster-craft-bricks.esm.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "keywords": [
+    "Component",
+    "Vue3",
+    "UI"
+  ],
+  "typings": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/poster-craft-bricks.esm.js",
+      "require": "./dist/poster-craft-bricks.umd.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run clean && npm run build:esm && npm run build:umd",
@@ -28,7 +49,7 @@
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-typescript": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.5.15",
+    "@vue/compiler-sfc": "3.3.0",
     "@vue/eslint-config-typescript": "^5.0.2",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0-0",
